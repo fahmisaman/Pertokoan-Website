@@ -1,0 +1,42 @@
+<IfModule mod_rewrite.c> 
+RewriteEngine On
+RewriteRule ^Tanaman-Horti$ index.php?dir=karyawan&p=horti [L]
+RewriteRule ^Tanaman-Pangan$ index.php?dir=karyawan&p=pangan [L]
+RewriteRule ^Gapoktan$ index.php?dir=karyawan&p=poktan [L]
+RewriteRule ^Poktan$ index.php?dir=karyawan&p=gapoktan [L]
+RewriteRule ^Artikel$ index.php?dir=karyawan&p=artikel [L]
+RewriteRule ^Data-Artikel$ index.php?dir=karyawan&p=data_artikel [L]
+RewriteRule ^Edit-Password$ index.php?dir=karyawan&p=edit_sandi [L]
+
+RewriteRule ^Staf$ index.php?dir=karyawan&p=lokasi_tp [L]
+RewriteRule ^Data-Atasan$ index.php?dir=karyawan&p=atasan [L]
+RewriteRule ^Isi-Laporan([a-zA-Z0-9_-]+)$ index.php?dir=karyawan&p=laporan_harian&id_kategori=$1 [L]
+
+RewriteRule ^EditArtikel-([a-zA-Z0-9_-]+)$ index.php?dir=karyawan&p=edit_artikel&id_artikel=$1 [L]
+RewriteRule ^Praktek([a-zA-Z0-9_-]+)$ index.php?dir=karyawan&p=praktek&id_login=$1
+
+RewriteRule ^Pasien$ index.php?dir=umum&p=pasien [L]
+RewriteRule ^Profil([a-zA-Z0-9_-]+)$ index.php?dir=umum&p=profil&id_login=$1
+RewriteRule ^Data-Kategori$ index.php?dir=master&p=data_kategori [L]
+ 
+RewriteRule ^Data-Kecamatan$ index.php?dir=master&p=data_kecamatan [L] 
+RewriteRule ^Data-Desa$ index.php?dir=master&p=data_desa [L] 
+RewriteRule ^Data-Karyawan$ index.php?dir=master&p=user [L]
+RewriteRule ^Data-Gapoktan$ index.php?dir=master&p=data_poktan [L]
+RewriteRule ^Data-Poktan$ index.php?dir=master&p=data_gapoktan [L]
+RewriteRule ^Data-Komoditas$ index.php?dir=master&p=data_komoditas [L]
+RewriteRule ^Data-Jenis$ index.php?dir=master&p=data_jenis [L]
+
+RewriteRule ^Pendaftaran$ index.php?dir=karyawan&p=pendaftaran_dokter [L] 
+
+RewriteRule ^Surat-Dokter$ index.php?dir=asdok&p=surat [L]
+
+RewriteRule ^All-Pasien$ index.php?dir=admin&p=laporan_tahunan [L]
+
+RewriteRule ^Laporan-Tanaman-Pangan$ index.php?dir=laporan&p=lap_tp [L]
+RewriteRule ^Laporan-Tanaman-Hortikultura$ index.php?dir=laporan&p=lap_horti [L]
+RewriteRule ^Laporan-Petani$ index.php?dir=laporan&p=lap_petani [L]
+
+RewriteRule ^LogOut$ ../fungsi/logout.php [L] 
+Options All -Indexes
+</IfModule>
